@@ -22,8 +22,9 @@ namespace SerwisSamochodowy.Controllers
         public async Task<IActionResult> Index()
         {
             //return View(await _context.Zlecenies.ToListAsync());
-            var serwisContext2 = _context.Zlecenies.Include(m => m.Mechanik).Include(s => s.Samochod);
-            return View(await serwisContext2.ToListAsync());
+            var serwisContext2 = _context.Zlecenies.Include(m => m.Mechanik);
+            var sc = serwisContext2.Include(s => s.Samochod);
+            return View(await sc.ToListAsync());
         }
 
         // GET: Zlecenies/Details/5
