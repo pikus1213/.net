@@ -19,10 +19,10 @@
                 @Html.DisplayNameFor(model => model.Aktywne)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdSamochodu)
+                Samochód
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Mechanik.Imie)
+                Mechanik
             </th>
             <th></th>
         </tr>
@@ -38,12 +38,12 @@
             </td>
             <td>
                 @*@Html.DisplayFor(modelItem => item.IdSamochodu)*@
-                @Html.DisplayFor(modelItem => item.Samochod.Model)
+                @Html.DisplayFor(modelItem => item.Samochod.NazwaSamochodu)
 
             </td>
             <td>
                 @*@Html.DisplayFor(modelItem => item.IdMechanika)*@
-                @Html.DisplayFor(modelItem => item.Mechanik.Nazwisko)
+                @Html.DisplayFor(modelItem => item.Mechanik.ImieNazwiskoM)
 
                 @*@foreach (var s in item.Mechaniks)
                 {
